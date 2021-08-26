@@ -1,0 +1,13 @@
+.left {
+    float: left;
+    margin-left: 20px;
+    width: 160px;
+}
+
+.right {
+    margin-left: 200px;
+}
+
+.tuples {
+    height: 300px;
+}

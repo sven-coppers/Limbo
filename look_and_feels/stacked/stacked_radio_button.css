@@ -1,0 +1,87 @@
+.stacked .radio_option {
+    margin-right: 3px;
+}
+
+.stacked .radio_option_label {
+    position: relative;
+    display: inline-block;
+}
+
+.stacked .radio_option .layers {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    vertical-align: text-top;
+}
+
+.stacked .radio_option:active .layer:not(.disabled) {
+    border-color: #999999;
+    color: #999999;
+}
+
+.stacked .radio_option_label {
+    position: relative;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-left: 15px;
+}
+
+.stacked .radio_option .radio_option_circle {
+    position: absolute;
+    top: 0px;
+    border: 1px solid black;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    overflow: visible;
+    border-radius: 8px;
+    padding: 0px;
+    height: 12px;
+    width: 12px;
+}
+
+.stacked .radio_option.selected .radio_option_circle {
+    background-color: rgb(150, 150, 150);
+}
+
+.stacked .radio_option .radio_option_circle.layer2 {
+    display: none;
+}
+
+.stacked .radio_option.feedforward_selected .radio_option_circle.layer2 {
+    background-color: rgb(150, 150, 150);
+    display: inline-block;
+}
+
+.stacked .radio_option.feedforward_deselected .radio_option_circle.layer2 {
+    background-color: white;
+    display: inline-block;
+}
+
+.stacked .radio_option .layer1 {
+    top: -1px; /* to compensate for having a border */
+    left: -1px; /* to compensate for having a border */
+    z-index: 0;
+}
+
+.stacked .radio_option .layer2 {
+    top: -4px;
+    left: 2px;
+    z-index: -1;
+}
+
+.stacked .radio_option .layer.disabled {
+    border-style: dotted;
+    color: lightgrey;
+    border-color: lightgrey;
+    cursor: default;
+}
+
+.stacked .radio_option.disabled .label {
+    color: lightgrey;
+}
+
+.stacked .radio_option.disabled .layer1 {
+    border-style: dotted;
+    border-color: lightgrey;
+}

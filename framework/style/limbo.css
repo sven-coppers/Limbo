@@ -1,0 +1,48 @@
+.limbo_buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.limbo_events {
+    display: inline-block;
+}
+
+.limbo_button {
+    background-color: #d5efc2;
+    color:  #5f963e;
+    display: inline-block;
+    border-radius: 13px;
+    padding: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 15px;
+    border: 2px solid #d5efc2;
+}
+
+.limbo_revert:hover,
+.limbo_cancel:hover,
+.limbo_accept:hover {
+    background-color: #5f963e;
+    border: 2px solid #5f963e;
+    cursor: pointer;
+    color: white;
+}
+
+.limbo_button .event_reject,
+.limbo_button .event_accept {
+    background-color: #70ad47;
+    border: 2px solid #70ad47;
+    color: white;
+}
+
+
+.limbo_button .event_reject:hover,
+.limbo_button .event_reject.feedforward,
+.limbo_button .event_accept:hover,
+.limbo_button .event_accept.feedforward {
+    background-color: #2f481f;
+    border: 2px solid #2f481f;
+    color: white;
+    cursor: pointer;
+}

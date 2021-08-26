@@ -1,0 +1,82 @@
+.black .widget {
+    position: relative;
+}
+
+.black .widget .change_indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #cccccc;
+    font-size: 1px;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+}
+
+.black .widget .change_indicator.acknowledged {
+    display: none;
+}
+
+.black .widget .help_button {
+    width: 12px;
+    height: 10px;
+    z-index: 2;
+    background-color: #cccccc;
+    border: 0px;
+    padding-top: 2px;
+    font-weight: bold;
+    font-size: 10px;
+    color: white;
+    vertical-align: middle;
+    border-radius: 6px;
+
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+}
+
+.black .widget .help_button:hover {
+    background-color: #969696;
+}
+
+.tooltip {
+    background-color: white;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    padding: 5px;
+    /*  left: -120px;
+      top: -20px;
+      width: 100px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 10px;
+}
+
+.tooltip p.tooltip_legacy {
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.tooltip .tooltip_questions {
+    display: table;
+    width: 100%;
+}
+
+.tooltip .question_type {
+    display: table-row;
+    color: #666666;
+    width: 100%;
+}
+
+.tooltip .question_name {
+    display: table-cell;
+    text-align: left;
+}
+
+.tooltip .question_open {
+    display: table-cell;
+    text-align: right;
+}

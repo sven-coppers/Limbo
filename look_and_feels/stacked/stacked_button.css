@@ -1,0 +1,77 @@
+.stacked .button {
+    border: none;
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+    margin-right: 3px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.stacked .button:not(.disabled):active .layer {
+    border-color: #999999;
+    color: #999999;
+}
+
+.stacked .button .label {
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.stacked .button .layer {
+    position: absolute;
+    top: 0px;
+    border: 1px solid black;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    overflow: visible;
+    height: 100%;
+}
+
+.stacked .button .layer1 {
+    top: -1px; /* to compensate for having a border */
+    left: -1px; /* to compensate for having a border */
+    z-index: 0;
+}
+
+.stacked .button .layer2 {
+    top: -4px;
+    left: 2px;
+    z-index: -1;
+}
+
+.stacked .button .layer3 {
+    top: -7px;
+    left: 5px;
+    z-index: -2;
+}
+
+.stacked .button .layer4 {
+    top: -10px;
+    left: 8px;
+    z-index: -3;
+}
+
+.stacked .button.disabled {
+    cursor: default;
+}
+
+.stacked .button .layer.disabled {
+    border-style: dotted;
+    color: lightgrey;
+    border-color: lightgrey;
+}
+
+.stacked .button.disabled .label {
+    color: lightgrey;
+}
+
+.stacked .button.disabled .layer1 {
+    border-style: dotted;
+    border-color: lightgrey;
+}

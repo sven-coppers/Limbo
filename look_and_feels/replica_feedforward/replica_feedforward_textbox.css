@@ -1,0 +1,50 @@
+.replica_feedforward .textbox {
+    position: relative;
+    display: inline-block;
+}
+
+.replica_feedforward .textbox .feedforward {
+    position: absolute;
+    width: 100%;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-top: 0px;
+    display: block;
+    border-bottom: 0px;
+}
+
+.replica_feedforward .textbox .feedforward_item {
+    border-bottom: 1px solid #999999;
+    width: auto;
+    height: 100%;
+}
+
+.replica_feedforward .textbox .feedforward_value {
+    border-left: 1px solid #999999;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    height: 100%;
+    font-family: Arial;
+    font-size: 13px;
+    height: 13px;
+}
+
+.replica_feedforward .textbox .feedforward_icon {
+    float: right;
+    height: 100%;
+    border-right: 1px solid #999999;
+    font-size: 10px;
+    height: 17px;
+}
+
+.replica_feedforward .textbox .feedforward canvas {
+    height: 16px;
+    width: 16px;
+}
+
+.replica_feedforward .textbox .feedforward .shortcut {
+    padding-top: 4px;
+    padding-right: 1px;
+    height: 13px;
+}

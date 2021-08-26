@@ -1,0 +1,41 @@
+.stacked .listbox {
+    position: relative;
+}
+
+.stacked .listbox select {
+    width: 150px;
+}
+
+.stacked .listbox .layer {
+    border: 1px solid rgb(128, 128, 128);
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    height: 100%;
+    width: 150px;
+}
+
+.stacked .listbox .layer.layer0 {
+    background-color: #444444;
+    z-index: 0;
+    position: relative;
+    border: none;
+}
+
+.stacked .listbox .layer.layer1 {
+    top: -8px;
+    left: 6px;
+    z-index: -1;
+}
+
+.stacked .listbox .item {
+    width: 100%;
+}
+
+.stacked .listbox .item.feedforward_unselected {
+    background-color: #ffffff;
+}
+
+.stacked .listbox .item.feedforward_selected {
+    background-color: #999999;
+}

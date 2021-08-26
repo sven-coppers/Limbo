@@ -1,0 +1,71 @@
+.replica .radio_option {
+    margin-left: 10px;
+    margin-bottom: 3px;
+}
+
+.replica .radio_option_label {
+    position: relative;
+    display: inline-block;
+}
+
+.replica .radio_option_circle {
+    border: 0.5px solid rgb(166, 166, 166);
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    border-radius: 6px;
+    background: linear-gradient(rgb(237, 237, 237), rgb(222, 222, 222));
+    margin-left: -5px;
+    margin-right: 5px;
+    cursor: default;
+    position: relative;
+}
+
+.replica .radio_option_inner_circle {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    font-size: 11px;
+    width: 6px;
+    height: 6px;
+    border-radius: 4px;
+    background-color: rgb(102, 102, 102);
+    display: none;
+}
+
+.replica .radio_option:not(.disabled) .radio_option_circle:hover {
+    background: linear-gradient(rgb(240, 240, 240), rgb(225, 225, 225));
+    border-color: rgb(153, 153, 153);
+}
+
+.replica .radio_option:not(.disabled) .radio_option_circle:active {
+    background: linear-gradient(rgb(231, 231, 231), rgb(215, 215, 215));
+    border-color: rgb(161, 161, 161);
+}
+
+.replica .radio_option_circle.form_feedforward_selected .radio_option_inner_circle {
+    background-color: rgb(130, 130, 130);
+    display: inline-block;
+}
+
+.replica .radio_option_circle.form_feedforward_deselected .radio_option_inner_circle {
+    background-color: rgb(180, 180, 180);
+    display: inline-block;
+}
+
+.replica .radio_option.disabled.form_feedforward_enable .radio_option_circle {
+    opacity: 0.7;
+}
+
+.replica .radio_option.form_feedforward_disable .radio_option_circle {
+    opacity: 0.7;
+}
+
+.replica .radio_option.selected .radio_option_inner_circle {
+    display: inline-block;
+}
+
+.replica .radio_option.disabled .radio_option_circle {
+    opacity: 0.45;
+}
+

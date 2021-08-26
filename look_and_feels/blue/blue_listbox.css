@@ -1,0 +1,34 @@
+.blue .listbox {
+    overflow-y: scroll;
+    border: 1px solid #a8a8a8;
+}
+
+.blue .listbox .option {
+    background-color: white;
+    padding: 2px;
+}
+
+.blue .listbox .option.selected {
+    background-color: dodgerblue !important;
+    color: white;
+}
+
+.blue .listbox .option.feedforward_selected{
+    background-color: #33c5ff;
+}
+
+.blue .listbox .option.selected.feedforward_deselected {
+    background-color: #a8a8a8 !important;
+}
+
+.blue .listbox .option.feedforward_removed  {
+    color: black;
+    text-decoration: line-through;
+    background-color: #a8a8a8 !important;
+}
+
+.blue .listbox .option.feedforward_added  {
+    color: #33c5ff;
+
+}
+

@@ -1,0 +1,12 @@
+.black .label {
+    display: inline;
+}
+
+.black .label.feedforward {
+    color: #333333;
+    background-color: #eeeeee;
+}
+
+.black .label .value {
+    display: inline;
+}

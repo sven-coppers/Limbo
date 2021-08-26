@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Limbo</title>
+
+    <!-- General Styling -->
+    <link type="text/css" rel="stylesheet" href="framework/style/reset.css">
+    <link type="text/css" rel="stylesheet" href="framework/style/frame.css">
+    <link type="text/css" rel="stylesheet" href="framework/style/general.css">
+    <link type="text/css" rel="stylesheet" href="framework/style/limbo.css">
+    <link type="text/css" rel="stylesheet" href="lib/jquery.tooltip.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+    <!-- blue -->
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_button.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_checkbox.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_radio_button.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_textbox.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_selection_hybrid.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_slider.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_panel.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_tab.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_listbox.css">
+
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_label.css">
+
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_limbo.css">
+
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_widget.css">
+
+    <!-- Use Case Styling -->
+    <link type="text/css" rel="stylesheet" href="cases/demo/webshop/style.css">
+</head>
+<body>
+
+
+
+<div class="use_cases">
+<div class="use_case" id="webshop">
+    <div class="look_and_feel">
+        <h1>Webshop</h1>
+        <div class="tab_group" id="checkout_flow">
+            <div class="tab" id="tab_cart">
+                <div class="tab_header">Cart</div>
+                <div class="tab_content">
+                    <table>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                        <tr>
+                            <td>FitByte Smart Watch</td>
+                            <td>$199.95</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Spilip Airfryer XXL</td>
+                            <td>$349.95</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="total">
+                            <td>Total</td>
+                            <td>$549.90</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <button class="proceed_button" id="proceed_address">Proceed</button>
+                </div>
+            </div>
+            <div class="tab" id="tab_address">
+                <div class="tab_header">Address</div>
+                <div class="tab_content">
+                    <p>Choose a billing address:</p>
+                    <input type="radio" name="billing_address" value="billing_home" id="billing_home"><label for="billing_home">Home - Los Angeles (United States)</label><br>
+                    <input type="radio" name="billing_address" value="billing_work" id="billing_work"><label for="billing_work">Work - Hawaii (United States)</label>
+                    <p></p>
+                    <p>Choose a shipping address:</p>
+                    <input type="radio" name="shipping_address" value="shipping_home" id="shipping_home"><label for="shipping_home">Home - Los Angeles (United States)</label><br>
+                    <input type="radio" name="shipping_address" value="shipping_work" id="shipping_work"><label for="shipping_work">Work - Hawaii (United States)</label>
+
+                    <button class="previous_button" id="previous_cart">Previous</button>
+                    <button class="proceed_button" id="proceed_shipping">Proceed</button>
+                </div>
+            </div>
+            <div class="tab" id="tab_shipping">
+                <div class="tab_header">Shipping</div>
+                <div class="tab_content">
+                    <p>Choose a shipping method:</p>
+                    <input type="radio" name="shipping_method" value="shipping_express" id="shipping_express"><label for="shipping_express">Express delivery</label><br>
+                    <input type="radio" name="shipping_method" value="shipping_standard" id="shipping_standard"><label for="shipping_standard">Standard delivery</label>
+                    <button class="previous_button" id="previous_address">Previous</button>
+                    <button class="proceed_button" id="proceed_payment">Proceed</button>
+                </div>
+            </div>
+            <div class="tab" id="tab_payment">
+                <div class="tab_header">Payment</div>
+                <div class="tab_content">
+                    <p>How do you want to pay?</p>
+                    <input type="radio" name="payment" value="payment_credit" id="payment_credit"><label for="payment_credit">Credit Card</label><br>
+                    <input type="radio" name="payment" value="payment_online" id="payment_online"><label for="payment_online">Online account</label><br>
+                    <input type="radio" name="payment" value="payment_bank" id="payment_bank"><label for="payment_bank">Bank Transaction</label>
+                    <button class="previous_button" id="previous_shipping">Previous</button>
+                    <button class="proceed_button" id="proceed_overview">Proceed</button>
+                </div>
+            </div>
+            <div class="tab" id="tab_overview">
+                <div class="tab_header">Overview</div>
+                <div class="tab_content"><p>Please double check these details before confirming your order.</p>
+                    <p>Estimated delivery: <span class="label" id="delivery_date">0</span> working days</p>
+                    <table>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>1x FitByte Smart Watch</td>
+                            <td class="currency">$199.95</td>
+                        </tr>
+                        <tr>
+                            <td>1x Spilip Airfryer XXL</td>
+                            <td class="currency">$349.95</td>
+                        </tr>
+                        <tr class="shipping_costs">
+                            <td>Shipping costs</td>
+                            <td class="currency">$<span class="label" id="shipping_costs">0.0</span></td>
+                        </tr>
+                        <tr class="transaction_fee">
+                            <td>Transaction Fee</td>
+                            <td class="currency">$<span class="label" id="transaction_fee">0.0</span></td>
+                        </tr>
+                        <tr class="total">
+                            <td>Grand Total</td>
+                            <td class="currency">$<span class="label" id="total_price">0.0</span></td>
+                        </tr>
+                    </table>
+                    <p></p>
+                    <p>Coupon:</p>
+                    <input type="text" id="coupon" value="FREESHIPPING" />
+                    <button class="apply_coupon" id="apply_coupon">Apply</button>
+                    <button class="proceed_button" id="proceed_confirm">Confirm order</button>
+                    <button class="previous_button" id="previous_payment">Previous</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="lib/easytimer.min.js"></script>
+<script src="lib/jquery.tooltip.js"></script>
+<!-- <script src="demo_page.js"></script> -->
+
+<!-- Helpers -->
+<script src="framework/helpers/array.js"></script>
+<script src="framework/helpers/string.js"></script>
+<script src="framework/helpers/logger.js"></script>
+<script src="framework/helpers/time.js"></script>
+<script src="framework/globals.js"></script>
+
+<!-- Models -->
+<script src="framework/widgets/widget_state.js"></script>
+<script src="framework/widgets/selectable_widget_state.js"></script>
+<script src="framework/widgets/button_state.js"></script>
+<script src="framework/widgets/radio_button_state.js"></script>
+<script src="framework/widgets/radio_group_state.js"></script>
+<script src="framework/widgets/checkbox_state.js"></script>
+<script src="framework/widgets/checkbox_group_state.js"></script>
+<script src="framework/widgets/textbox_state.js"></script>
+<script src="framework/widgets/selection_hybrid_state.js"></script>
+<script src="framework/widgets/slider_state.js"></script>
+<script src="framework/widgets/listbox_state.js"></script>
+<script src="framework/widgets/panel_state.js"></script>
+<script src="framework/widgets/tab_state.js"></script>
+<script src="framework/widgets/label_state.js"></script>
+<script src="framework/widgets/tab_group_state.js"></script>
+<script src="framework/widgets/listbox_option_state.js"></script>
+
+<script src="framework/model/state_machine.js"></script>
+<script src="framework/model/state_machine_state.js"></script>
+<script src="framework/model/state_machine_reader.js"></script>
+<script src="framework/model/transition.js"></script>
+<script src="framework/model/gui_event.js"></script>
+<script src="framework/model/textbox_event.js"></script>
+<script src="framework/model/listbox_event.js"></script>
+<script src="framework/model/history_stack.js"></script>
+
+<!-- Framework -->
+<script src="framework/controller.js"></script>
+<script src="framework/look_and_feel.js"></script>
+<script src="framework/limbo_controller.js"></script>
+<script src="framework/widget_factory.js"></script>
+<script src="framework/main_window.js"></script>
+<script src="framework/main_window_state.js"></script>
+<script src="framework/application_state.js"></script>
+
+<!-- Generic Widgets -->
+<script src="framework/widgets/widget.js"></script>
+<script src="framework/widgets/selectable_widget.js"></script>
+<script src="framework/widgets/panel.js"></script>
+<script src="framework/widgets/button.js"></script>
+<script src="framework/widgets/radio_button.js"></script>
+<script src="framework/widgets/radio_group.js"></script>
+<script src="framework/widgets/checkbox.js"></script>
+<script src="framework/widgets/checkbox_group.js"></script>
+<script src="framework/widgets/textbox.js"></script>
+<script src="framework/widgets/listbox.js"></script>
+<script src="framework/widgets/selection_hybrid.js"></script>
+<script src="framework/widgets/slider.js"></script>
+<script src="framework/widgets/tab.js"></script>
+<script src="framework/widgets/tab_group.js"></script>
+<script src="framework/widgets/label.js"></script>
+
+<!-- blue -->
+<script src="look_and_feels/blue/blue_look_and_feel.js"></script>
+<script src="look_and_feels/blue/blue_panel.js"></script>
+<script src="look_and_feels/blue/blue_button.js"></script>
+<script src="look_and_feels/blue/blue_checkbox.js"></script>
+<script src="look_and_feels/blue/blue_checkbox_group.js"></script>
+<script src="look_and_feels/blue/blue_radio_button.js"></script>
+<script src="look_and_feels/blue/blue_radio_group.js"></script>
+<script src="look_and_feels/blue/blue_selection_hybrid.js"></script>
+<script src="look_and_feels/blue/blue_slider.js"></script>
+<script src="look_and_feels/blue/blue_tab.js"></script>
+<script src="look_and_feels/blue/blue_tab_group.js"></script>
+<script src="look_and_feels/blue/blue_textbox.js"></script>
+<script src="look_and_feels/blue/blue_listbox.js"></script>
+<script src="look_and_feels/blue/blue_label.js"></script>
+
+<!-- Controllers -->
+<script src="cases/demo/webshop/controller.js"></script>
+
+<script>
+    var root = '';
+    var logger = new Logger();
+    lookAndFeels.push('blue');
+    lookAndFeelModes.push('some');
+</script>
+</html>

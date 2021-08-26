@@ -1,0 +1,40 @@
+.black .widget.radio_option {
+    margin-bottom: 3px;
+    display: table;
+    position: relative;
+    padding-right: 15px;
+    position: relative;
+}
+
+.black .radio_option_circle {
+    border: 1px solid black;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    position: relative; /* For help button */
+    margin-right: 5px;
+    transition: background 0.15s ;
+}
+
+.black .radio_option_label {
+    display: inline-block;
+}
+
+.black .radio_option.selected .radio_option_circle {
+    background-color: #000000;
+}
+
+.black .radio_option.feedforward_selected .radio_option_circle {
+    background-color: #666666;
+}
+
+.black .radio_option.selected.feedforward_deselected .radio_option_circle {
+    background-color: #cccccc;
+}
+
+.black .widget.radio_option .help_button {
+    right: -5px;
+    top: 3px;
+}

@@ -1,0 +1,93 @@
+.stacked .check_option {
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
+
+.stacked .check_option .layers {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    vertical-align: text-top;
+}
+
+.stacked .check_option .check_option_label {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.stacked .check_option:active .layer:not(.disabled) {
+    border-color: #999999;
+    color: #999999;
+}
+
+.stacked .check_option .check_option_circle  {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    background-color: white;
+    text-align: center;
+    overflow: visible;
+    padding: 0px;
+    border: 1px solid black;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.stacked .check_option .check_option_circle .checkmark {
+    position: absolute;
+    left: 1px;
+    font-size: 12px;
+    top: 1px;
+    display: none;
+}
+
+.stacked .check_option.selected .layer1 .checkmark {
+    display: inline-block;
+}
+
+.stacked .check_option.feedforward_selected .layer2,
+.stacked .check_option.feedforward_deselected .layer2 {
+    display: inline-block;
+}
+
+.stacked .check_option.feedforward_selected .layer2 .checkmark {
+    left: 2px;
+    display: inline-block;
+}
+
+.stacked .check_option.feedforward_deselected .layer2 .checkmark {
+    display: none;
+}
+
+.stacked .check_option .layer1 {
+    top: -1px; /* to compensate for having a border */
+    left: -1px; /* to compensate for having a border */
+    z-index: 0;
+}
+
+.stacked .check_option .layer2 {
+    top: -5px;
+    left: 3px;
+    z-index: -1;
+    display: none;
+}
+
+.stacked .check_option .layer.disabled {
+    border-style: dotted;
+    color: lightgrey;
+    border-color: lightgrey;
+    cursor: default;
+}
+
+.stacked .check_option.disabled .label {
+    color: lightgrey;
+}
+
+.stacked .check_option.disabled .layer1 {
+    border-style: dotted;
+    border-color: lightgrey;
+}

@@ -1,0 +1,39 @@
+.black .check_option {
+    margin-left: 3px;
+    margin-bottom: 3px;
+    position: relative;
+    display: table;
+    padding-right: 15px;
+}
+
+.black .check_option_circle {
+    border: 1px solid black;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background 0.15s ;
+}
+
+.black .check_option_label {
+    display: inline-block;
+}
+
+.black .check_option.selected .check_option_circle {
+    background-color: #000000;
+}
+
+.black .check_option.feedforward_selected .check_option_circle {
+    background-color: #666666;
+}
+
+.black .check_option.selected.feedforward_deselected .check_option_circle {
+    background-color: #cccccc;
+}
+
+.black .check_option .help_button {
+    right: -5px;
+    top: 3px;
+}

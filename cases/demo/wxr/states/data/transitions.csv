@@ -1,0 +1,11 @@
+state_old,id,event,state_new
+S0,tilt_manual,event_click,S1
+S1,tilt_auto,event_click,S0
+S1,stabilization_off,event_click,S2
+S2,stabilization_on,event_click,S1
+S2,tilt_auto,event_click,S3
+S2,tilt,event_value_changed,S4
+S3,tilt_manual,event_click,S2
+S4,tilt,event_value_confirmed,S3
+S4,tilt,event_value_changed,S4
+S4,tilt,event_value_timeout,S2

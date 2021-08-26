@@ -1,0 +1,28 @@
+.replica .button {
+    border: 0.5px solid rgb(157, 157, 157);
+    font-family: Arial;
+    display: inline-block;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: inline-block;
+    background: linear-gradient(rgb(247, 247, 247), rgb(221, 221, 221));
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.replica .button:not(.disabled):active {
+    color: black;
+    background: linear-gradient(rgb(221, 221, 221), rgb(247, 247, 247));
+}
+
+.replica .button:not(.disabled):hover {
+    border-color: rgb(118, 118, 118);
+}
+
+.replica .button.disabled {
+    color: rgb(128, 128, 128);
+    cursor: default;
+}

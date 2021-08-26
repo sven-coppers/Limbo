@@ -1,0 +1,51 @@
+.replica .check_option {
+    margin-left: 10px;
+    margin-bottom: 3px;
+}
+
+.replica .check_option .check_option_label {
+    display: inline-block;
+}
+
+.replica .check_option .check_option_circle {
+    border: 1px solid rgb(166, 166, 166);
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    border-radius: 2px;
+    background: linear-gradient(rgb(237, 237, 237), rgb(222, 222, 222));
+    margin-left: -5px;
+    margin-right: 5px;
+    cursor: default;
+    position: relative;
+}
+
+.replica .check_option:not(.disabled) .check_option_circle:hover {
+    background: linear-gradient(rgb(240, 240, 240), rgb(225, 225, 225));
+    border-color: rgb(153, 153, 153);
+}
+
+.replica .check_option:not(.disabled) .check_option_circle:active {
+    background: linear-gradient(rgb(231, 231, 231), rgb(215, 215, 215));
+    border-color: rgb(161, 161, 161);
+}
+
+.replica .check_option .checkmark {
+    display: none;
+}
+
+.replica .check_option.selected .check_option_circle .checkmark {
+    display: inline-block;
+}
+
+.replica .check_option.disabled .check_option_circle {
+    opacity: 0.45;
+}
+
+.replica .checkmark {
+    color: rgb(67, 67, 67);
+    position: absolute;
+    left: 1px;
+    font-size: 11px;
+    display: none;
+}
